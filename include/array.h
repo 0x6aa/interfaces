@@ -19,6 +19,7 @@ extern void array_put(T array, int index, const void *data);
 extern void array_push_back(T array, const void *data);
 extern void array_pop_back(T array);
 extern void array_remove(T array, int index);
+extern void array_traversal(T array, void func(void *));
 
 #undef T
 #endif

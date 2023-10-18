@@ -165,3 +165,11 @@ void array_remove(T array, int index)
            ((array->size) - (index + 1)) * array->data_size);
     array->size--;
 }
+
+void array_traversal(T array, void func(void *)) {
+    assert(array);
+
+    for(int i = 0; i < array->size; i++) {
+        func(array->memory + i * array->data_size);
+    }
+}
